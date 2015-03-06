@@ -6,9 +6,9 @@
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: '', // Add file route here
-        controller: '' // Add controller for above route here
+      .when('/calendar', {
+        templateUrl: 'calendar/views/calendar.html',
+        controller: 'CalendarController as calCtrl'
       })
   });
 
