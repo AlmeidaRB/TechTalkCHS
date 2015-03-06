@@ -1,7 +1,10 @@
 <div>
   <ul>
-    <li ng-repeat=''></li>
+    <li class='NewsItem' ng-repeat="story in newsCtrl.stories">
+      <img data-ng-src={{story.picture}} />
+      <p class='Name'>{{story.headline}}</p>
+      <p class='Author'>{{story.byline}}</p>
+    </li>
   </ul>
-  <button ng-click=''>Add New Article</button> <!-- this is an admin button -->
-  <button ng-click=''>View All Articles</button>
+  <button ng-click='newsCtrl.getArticlesAll'>View All Articles</button>
 </div>

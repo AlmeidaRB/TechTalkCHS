@@ -20,6 +20,8 @@
       .otherwise({
         redirectTo: '/notfound'
       });
-  });
+  })
+
+  .constant('_', _);
 
 })();

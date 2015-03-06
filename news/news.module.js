@@ -6,9 +6,9 @@
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: '', // Add file route here
-        controller: '' // Add controller for above route here
+      .when('/news/add', {
+        templateUrl: 'news/views/addArticle.html',
+        controller: 'NewsController as newsCtrl'
       })
   });
 
