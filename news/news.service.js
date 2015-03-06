@@ -13,6 +13,7 @@
           console.log('ERROR NewsService/postArticle');
         });
       };
+      
 
       var getArticles = function () {
         return $http.get(url);
