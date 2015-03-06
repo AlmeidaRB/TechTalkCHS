@@ -5,6 +5,7 @@
     'ngRoute',
     'newsRoute',
     'calendarRoute'
+
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -18,6 +19,8 @@
       .otherwise({
         redirectTo: '/notfound'
       });
-  });
+  })
 
+  .constant('_', _);
+  
 })();
