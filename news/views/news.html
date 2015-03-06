@@ -1,6 +1,6 @@
 <div>
   <ul>
-    <li class='NewsItem' ng-repeat="story in newsCtrl.stories">
+    <li class='NewsItem' ng-repeat="story in newsCtrl.stories | limitTo: 3">
       <img data-ng-src={{story.picture}} />
       <p class='Name'>{{story.headline}}</p>
       <p class='Author'>{{story.byline}}</p>

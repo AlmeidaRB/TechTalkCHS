@@ -1,3 +1,14 @@
-<div ng-controller=""></div><!--News - These are the two controllers to create views for -->
+<!-- <div ng-controller=""></div> --><!--News - These are the two controllers to create views for -->
 
-<div ng-controller=""></div><!--Calendar - These are the two controllers to create views for -->
+<!-- <div ng-controller=""></div> --><!--Calendar - These are the two controllers to create views for -->
+
+<div ng-controller="NewsController as newsCtrl">
+  <ul>
+    <li class='NewsItem' ng-repeat="story in newsCtrl.getArticles  | limitTo:3">
+      <img data-ng-src={{story.picture}} />
+      <p class='Name'>{{story.headline}}</p>
+      <p class='Author'>{{story.byline}}</p>
+    </li>
+  </ul>
+  <button ng-click='newsCtrl.getArticlesAll'>View All Articles</button>
+</div>

@@ -11,10 +11,16 @@
         $scope.newArticle = {};
       };
 
-      //returns number of articles passed through function
-      newsCtrl.getArticles = function(passedQuantity){
-        NewsService.getArticles(passedQuantity)
-      };
+      NewsService.getArticles().success(function(data){
+        newsCtrl.getArticles = data;
+      })
+      .error(function(){
+        console.log('newsCtrl.getProducts error')
+      });
+
+
+
+
 
 
 
