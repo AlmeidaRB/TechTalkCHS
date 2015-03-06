@@ -18,7 +18,9 @@
         return $http.get(url);
       };
 
-
+      var getOneArticle = function (articleId) {
+        return $http.get(url + '/' + articleId);
+      };
 
 
       //returns specified number of articles from db
@@ -34,6 +36,7 @@
       return {
         postArticle: postArticle,
         getArticles: getArticles,
+        getOneArticle: getOneArticle
         // getArticlesFew: getArticlesFew,//marked for deletion
         // getArticlesAll: getArticlesAll,//marked for deletion
         // getArticlesOne: getArticlesOne,

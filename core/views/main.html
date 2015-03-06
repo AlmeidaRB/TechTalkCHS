@@ -7,7 +7,7 @@
   <ul>
     <li class='NewsItem' ng-repeat="story in newsCtrl.getArticles  | limitTo:3">
       <img data-ng-src={{story.picture}} />
-      <p class='Name'>{{story.headline}}</p>
+      <p class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
       <p class='Author'>{{story.byline}}</p>
     </li>
   </ul>
