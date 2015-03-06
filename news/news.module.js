@@ -10,6 +10,10 @@
         templateUrl: 'news/views/addArticle.html',
         controller: 'NewsController as newsCtrl'
       })
+      .when('/news/list', {
+        templateUrl: 'news/views/newsList.html',
+        controller: 'NewsController as newsCtrl'
+      })
   });
 
 })();

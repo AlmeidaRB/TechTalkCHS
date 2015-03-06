@@ -5,20 +5,31 @@
 
       var url = 'http://tiy-fee-rest.herokuapp.com/collections/newsModule';
 
-      //adds article to db
       var postArticle = function (newArticle) {
-        $http.post(newsArticle).success(function(){
-          //$location.path("/products");
+        $http.post(url, newArticle).success(function(){
+          //things can happen here
         })
         .error(function(){
           console.log('ERROR NewsService/postArticle');
         });
       };
 
-      //returns specified number of articles from db
-      var getArticles = function (passedQuantity) {
-        $http.get(url);
+      var getArticles = function () {
+        return $http.get(url);
       };
+
+
+
+
+      //returns specified number of articles from db
+      // var getArticles = function (passedQuantity) {
+      //   if(passedQuantity==='all'){
+      //     return $http.get(url);
+      //   }else if(passedQuantity){
+      //
+      //   }
+      //
+      // };
 
       return {
         postArticle: postArticle,
