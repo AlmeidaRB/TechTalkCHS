@@ -2,11 +2,11 @@
 
 <div class='listItem'>
   <ul>
-    <li ng-repeat="story in newsCtrl.stories">
+    <li ng-repeat="story in newsCtrl.getArticles">
       <img data-ng-src={{story.picture}} />
       <p class='ListHeadline'>{{story.headline}}</p>
       <p class='ListAuthor'>{{story.byline}}</p>
-      <p class='ListStory'>{{story.text}}</p>
+      <p class='ListStory'>{{story.story}}</p>
       <button ng-click='newsCtrl.getArticlesOne'>Read Article</button>
     </li>
   </ul>

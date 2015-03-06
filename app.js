@@ -12,7 +12,7 @@
     $routeProvider
       .when('/', {
         templateUrl: 'core/views/main.html',
-        controller: 'CoreController'
+        //controller: 'CoreController as coreCtrl'
       })
       .when('/notfound', {
         templateUrl: 'core/views/notFound.html'
