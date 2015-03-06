@@ -4,8 +4,9 @@
   angular.module('ttcApp', [
     'ngRoute',
     'newsRoute',
-    'calendarRoute'
-
+    'calendarRoute',
+    'ui.bootstrap',
+    'mwl.calendar'
   ])
   .config(function ($routeProvider) {
     $routeProvider
