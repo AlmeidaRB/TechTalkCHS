@@ -1,9 +1,9 @@
-<form id='addArticleForm' ng-submit="adminCtrl.addProduct(newProduct)">
+<form id='addArticleForm' ng-submit="newsCtrl.addArticle(newArticle)">
   <legend>New Product Listing</legend>
-  <input type="text" data-ng-model="newProduct.name" placeholder="Product Name">
-  <input type="text" data-ng-model="newProduct.image" placeholder="Image URL">
-  <textarea data-ng-model="newProduct.description" placeholder="Description"></textarea>
-  <input type="text" data-ng-model="newProduct.price" placeholder="Price">
-  <button type="submit" id='saveNewListingButton'>Add New Listing</button>
+  <input type="text" data-ng-model="newArticle.image" placeholder="Image URL">
+  <input type="text" data-ng-model="newArticle.headline" placeholder="Headline">
+  <input type="text" data-ng-model="newArticle.byline" placeholder="Author">
+  <textarea data-ng-model="newArticle.story" placeholder="Story Text"></textarea>
+  <button type="submit" id='saveNewArticleButton'>Add New Article</button>
 </form>
 <!-- photo, headline, byline(author name), date, text of story) -->
