@@ -24,16 +24,40 @@
     height:200px;
   }
 } */
-header {
-  margin-bottom: 25px; }
-  header h1 {
-    text-align: center;
-    padding: 15px;
-    font-family: 'TechTalk';
-    font-weight: 900;
-    font-size: 60px; }
-  header span {
-    font-style: italic; }
+.fixedHomeNav {
+  position: fixed;
+  width: 100%;
+  background: lightgray;
+  opacity: .8;
+  overflow: hidden;
+  z-index: 100;
+  padding: 0px;
+  margin-top: -80px; }
+
+.fixedHomeNavCal {
+  position: fixed;
+  width: 100%;
+  background: lightgray;
+  opacity: .8;
+  overflow: hidden;
+  z-index: 100;
+  padding: 0px;
+  margin-top: 0; }
+
+.listItem {
+  margin-top: 80px; }
+  .listItem li {
+    list-style-type: none; }
+
+.center-block {
+  margin-top: 60px;
+  padding: 0px;
+  text-align: center;
+  font-family: 'TechTalk';
+  font-size: 60px; }
+
+span {
+  font-style: italic; }
 
 .newsWindow {
   text-align: center;
@@ -69,11 +93,11 @@ header {
 
 .row {
   font-family: 'TechTalk';
-  margin: 10px; }
+  margin: 10px;
+  margin-top: 60px; }
 
 .buttonHome {
-  float: left;
-  margin-left: -110px; }
+  margin-left: -220px; }
 
 .container-fluid {
   padding-bottom: 80px; }
@@ -150,6 +174,15 @@ header {
 hr {
   width: 60%;
   border: 1px solid gray; }
+
+i {
+  float: right;
+  margin: 15px; }
+  i:hover {
+    cursor: pointer; }
+
+.DtlItem {
+  margin-top: 60px; }
 
 .news-blocks {
   width: 30%;
