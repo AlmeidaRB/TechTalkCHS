@@ -84,10 +84,18 @@ header {
 .row {
   margin: 10px;
 }
-.col-md-6 {
+.buttonHome {
   float: left;
-  margin-left: -100px;
+  margin-left: -110px;
 }
 .container-fluid {
 padding-bottom: 80px;
+}
+.mainTitle {
+  font-family: 'Tech-talk';
+  text-align: center;
+}
+hr {
+  width: 60%;
+  border: 1px solid gray;
 }
