@@ -23,30 +23,31 @@ angular.module('mwl.calendar')
     var currentYear = moment().year();
     var currentMonth = moment().month();
 
+
     $scope.events = [
   {
     title: 'Iron Yard Final Presentations',
     type: 'special',
     description: 'Final project presentations for The Iron Yard Academy Graduates of Charleston.',
     url: 'http://www.meetup.com/The-Iron-Yard-Charleston/',
-    starts_at: new Date(currentYear,currentMonth,27,14,60),
-    ends_at: new Date(currentYear,currentMonth,27,16,60)
+    starts_at: new Date(currentYear,currentMonth,27,13,60),
+    ends_at: new Date(currentYear,currentMonth,27,15,60)
   },
   {
     title: 'Charleston Ruby Society',
     type: 'info',
     description: 'Presentations about Ruby/Ruby on Rails/etc! Join us for the first inaugural MeetUp for the Charleston Ruby Group. The plan is to have a series of presentations about anything related to the Ruby programming language, the Ruby on Rails web framework, sweet Ruby Gems, interesting techniques, etc. Presentations should be concise, aim for 5-7 minutes per presenter. If you do wish to present something and you have a presentation of some sorts (PowerPoint, Prezi, anything of the like really), please message me beforehand if you could. I\'d like to create a compilation of sorts for anyone who wants to go back and look through what was presented. Also, there should be food available. Hope to see some familiar and new faces there!',
     url: 'http://www.meetup.com/The-Iron-Yard-Charleston/events/220762519/',
-    starts_at: new Date(currentYear,currentMonth,12,19,60),
-    ends_at: new Date(currentYear,currentMonth,12,21,60)
+    starts_at: new Date(currentYear,currentMonth,12,18,60),
+    ends_at: new Date(currentYear,currentMonth,12,20,60)
   },
   {
     title: 'Hack Night',
     type: 'info',
     description: 'Come one, come all to Hack Night! Hack night is a gathering of programmers, designers, hardware hackers, and other tech minded creators. We\'re open to all who are wanting to make something, contribute to open source, or need help with a project. Charleston has a great tech community with a lot of focused gatherings on learning code and sharing ideas or new technologies, but there\'s not really a regular meetup for hacking on some code or collaborating on something really cool.',
     url: 'http://www.meetup.com/The-Iron-Yard-Charleston/events/220130863/',
-    starts_at: new Date(currentYear,currentMonth,20,18,60),
-    ends_at: new Date(currentYear,currentMonth,20,22,60)
+    starts_at: new Date(currentYear,currentMonth,20,17,60),
+    ends_at: new Date(currentYear,currentMonth,20,21,60)
   },
   {
     title: 'Putting the User in User Assistance: The Role of UA in UX (and Vice Versa)',
@@ -147,24 +148,24 @@ angular.module('mwl.calendar')
       type: 'special',
       description: 'Final project presentations for The Iron Yard Academy Graduates of Charleston.',
       url: 'http://www.meetup.com/The-Iron-Yard-Charleston/',
-      starts_at: new Date(currentYear,currentMonth,27,14,60),
-      ends_at: new Date(currentYear,currentMonth,27,16,60)
+      starts_at: new Date(currentYear,currentMonth,27,13,60),
+      ends_at: new Date(currentYear,currentMonth,27,15,60)
     },
     {
       title: 'Charleston Ruby Society',
       type: 'info',
       description: 'Presentations about Ruby/Ruby on Rails/etc! Join us for the first inaugural MeetUp for the Charleston Ruby Group. The plan is to have a series of presentations about anything related to the Ruby programming language, the Ruby on Rails web framework, sweet Ruby Gems, interesting techniques, etc. Presentations should be concise, aim for 5-7 minutes per presenter. If you do wish to present something and you have a presentation of some sorts (PowerPoint, Prezi, anything of the like really), please message me beforehand if you could. I\'d like to create a compilation of sorts for anyone who wants to go back and look through what was presented. Also, there should be food available. Hope to see some familiar and new faces there!',
       url: 'http://www.meetup.com/The-Iron-Yard-Charleston/events/220762519/',
-      starts_at: new Date(currentYear,currentMonth,12,19,60),
-      ends_at: new Date(currentYear,currentMonth,12,21,60)
+      starts_at: new Date(currentYear,currentMonth,12,18,60),
+      ends_at: new Date(currentYear,currentMonth,12,20,60)
     },
     {
       title: 'Hack Night',
       type: 'info',
       description: 'Come one, come all to Hack Night! Hack night is a gathering of programmers, designers, hardware hackers, and other tech minded creators. We\'re open to all who are wanting to make something, contribute to open source, or need help with a project. Charleston has a great tech community with a lot of focused gatherings on learning code and sharing ideas or new technologies, but there\'s not really a regular meetup for hacking on some code or collaborating on something really cool.',
       url: 'http://www.meetup.com/The-Iron-Yard-Charleston/events/220130863/',
-      starts_at: new Date(currentYear,currentMonth,20,18,60),
-      ends_at: new Date(currentYear,currentMonth,20,22,60)
+      starts_at: new Date(currentYear,currentMonth,20,17,60),
+      ends_at: new Date(currentYear,currentMonth,20,21,60)
     },
     {
       title: 'Putting the User in User Assistance: The Role of UA in UX (and Vice Versa)',
