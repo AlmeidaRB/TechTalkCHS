@@ -18,15 +18,6 @@
       </slide>
     </carousel>
   </div>
-  <!-- <div class="row">
-    <div class="col-md-6">
-      <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-    </div>
-    <div class="col-md-6">
-      Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-      <br />Enter a negative number or 0 to stop the interval.
-    </div>
-  </div> -->
 </div>
 
 <div class='newsWindow' ng-controller="NewsController as newsCtrl">
@@ -34,14 +25,12 @@
     <div class="mainTitle"><h1>News Feed</h1></div>
     <hr>
     <li class='NewsItem' ng-repeat="story in newsCtrl.getArticles  | limitTo:3">
+
       <img data-ng-src={{story.image}} />
       <div class='headlineblock'>
-        <h3 class='Name'>{{story.headline}}</h3>
+        <h3 class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</h3>
         <h6 class='Author'>{{story.byline}}</h6>
       </div>
-      <img data-ng-src={{story.picture}} />
-      <p class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
-      <p class='Author'>{{story.byline}}</p>
     </li>
     <button ng-click="newsCtrl.routeTo('/news/list')">View All Articles</button>
   </ul>
