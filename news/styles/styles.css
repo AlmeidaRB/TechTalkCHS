@@ -19,7 +19,7 @@ header {
   height: 350px;
   margin: 15px auto;
   padding: 10px;
-  border: 5px inset black; }
+  border: 3px double black; }
   .newsWindow h1, .newsWindow h3 {
     font-family: 'TechTalk'; }
 
@@ -28,3 +28,12 @@ ul {
 
 li {
   list-style-type: none; }
+
+.modal-header {
+  font-family: 'TechTalk'; }
+
+.text-center {
+  font-family: 'TechTalk'; }
+
+.row {
+  font-family: 'TechTalk'; }
