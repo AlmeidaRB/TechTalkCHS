@@ -2,7 +2,9 @@
   "use strict";
 
 angular.module('mwl.calendar')
-  .controller('CalendarController', function (CalendarService, $scope, $modal, moment) {
+  .controller('CalendarController', function (CalendarService, $scope, $modal, moment, $location) {
+
+    var calCtrl = this;
 
   $scope.events = [
     {
@@ -115,6 +117,10 @@ angular.module('mwl.calendar')
 
       event[field] = !event[field];
     };
+
+    calCtrl.routeTo = function (path) {
+    $location.path(path);
+  };
   });
 
 
