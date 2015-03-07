@@ -12,7 +12,7 @@
       <slide ng-repeat="story in newsCtrl.getArticles | limitTo:3" active="slide.active">
         <img class='img img-responsive' data-ng-src="{{story.image}}" style="margin:auto;">
         <div class="carousel-caption">
-          <h4>Slide {{story.headline}}</h4>
+          <h4 class='ListHeadline'>Slide {{story.headline}}</h4>
           <p>{{story.byline}}</p>
         </div>
       </slide>
