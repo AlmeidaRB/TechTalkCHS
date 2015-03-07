@@ -7,13 +7,14 @@
       return factoryObj;
     });
 
+
 })();
 
 // (function (){
 //     "use strict";
 //     angular.module('.ttcApp')
 //     .factory('CalendarService', function($http, $rootScope){
-//          var url: "http://www.tiy-fee-rest.herokuapp.com/collections/ttcService"
+//          var url = "http://tiy-fee-rest.herokuapp.com/collections/ttcService"
 //
 //
 //           var getEvent = function () {
