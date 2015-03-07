@@ -77,6 +77,7 @@ header {
     padding:5px 0px 5px 0px;
   }
 }
+
 .modal-header {
     font-family: 'TechTalk';
 }
@@ -85,4 +86,19 @@ header {
 }
 .row {
     font-family: 'TechTalk';
+
+.viewAllEvents {
+  float: right;
+
+}
+.row {
+  margin: 10px;
+}
+.col-md-6 {
+  float: left;
+  margin-left: -100px;
+}
+.container-fluid {
+padding-bottom: 80px;
+
 }

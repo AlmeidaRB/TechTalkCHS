@@ -15,14 +15,16 @@ Also includes reader comments -->
 <div class="comments">
   <h2>Comments</h2>
   <ul>
-    <li ng-repeat="comment in storyCtrl.singleStory.comments">
-      <p class="comment">{{comment.text}}</p>
+    <li ng-repeat="comment in newsCtrl.getOneArticle.comments">
+      <p class="comment">
+        <span>{{comment.username}}: </span>
+        <span>{{comment.comment}}</span></p>
     </li>
   </ul>
 <p>Add comment:</p>
-  <form class='commentform' ng-submit="storyCtrl.singleStory.(comment)">
-    <input type="text" ng-model="singleStory.username" placeholder="Username">
-    <textarea ng-model="singleStory.comment"></textarea>
-    <button class= "btn btn-primary" type="submit">Submit Comment</button>
+  <form class='commentform' ng-submit="newsCtrl.addComment(newsCtrl.getOneArticle, newComment)">
+    <input type="text" ng-model="newComment.username" placeholder="Username">
+    <textarea ng-model="newComment.comment"></textarea>
+    <button type="submit">Post Comment</button>
  </form>
 </div>

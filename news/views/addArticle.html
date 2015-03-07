@@ -8,3 +8,11 @@
 </form>
 
 <!-- photo, headline, byline(author name), date, text of story) -->
+<div class='listItem'>
+  <ul>
+    <li ng-repeat="story in newsCtrl.getArticles" ng-hide="hideProduct">
+      <p class='ListHeadline' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
+      <button ng-click="hideProduct = !hideProduct; newsCtrl.deleteArticle(story._id)">Delete Article</button>
+    </li>
+  </ul>
+</div>
