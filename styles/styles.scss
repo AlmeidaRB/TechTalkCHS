@@ -59,27 +59,24 @@ header {
   img {
     width:105px;
     height:85px;
+    margin-bottom: 10px;
     display:inline-block;
   }
   ul {
     text-align:left;
     padding:5px;
   }
-  .headlineblock {
-    display:inline-block;
-    padding: 5px 0px 0px 10px;
+  li:nth-child(3) {
+    margin-left: 12.5%;
   }
   li {
     list-style-type: none;
-    padding: 12px 0px 12px 0px;
+    width: 25%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
   }
-  button {
-    padding:5px 0px 5px 0px;
-  }
-}
-.viewAllEvents {
-  float: right;
-
 }
 .row {
   margin: 10px;
@@ -98,4 +95,9 @@ padding-bottom: 80px;
 hr {
   width: 60%;
   border: 1px solid gray;
+}
+
+.news-blocks {
+  width: 30%;
+  display: inline;
 }
