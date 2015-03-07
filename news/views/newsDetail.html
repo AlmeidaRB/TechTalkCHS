@@ -1,6 +1,9 @@
 <!-- This is the news story detail page which will display the whole article, including: photo, headline, byline(author name), date, text of story)
 
 Also includes reader comments -->
+<header>
+<h1>{Tech News}</h1>
+</header>
 
 <div class='DtlItem'>
   <img data-ng-src={{newsCtrl.getOneArticle.picture}} />
@@ -9,7 +12,6 @@ Also includes reader comments -->
   <p class='DtlStory'>{{newsCtrl.getOneArticle.story}}</p>
 </div>
 
-
 <div class="comments">
   <h2>Comments</h2>
   <ul>
@@ -17,10 +19,10 @@ Also includes reader comments -->
       <p class="comment">{{comment.text}}</p>
     </li>
   </ul>
-</div>
 <p>Add comment:</p>
   <form class='commentform' ng-submit="storyCtrl.singleStory.(comment)">
     <input type="text" ng-model="singleStory.username" placeholder="Username">
     <textarea ng-model="singleStory.comment"></textarea>
-    <button type="submit">Submit Comment</button>
+    <button class= "btn btn-primary" type="submit">Submit Comment</button>
  </form>
+</div>

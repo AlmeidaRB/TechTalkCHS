@@ -1,4 +1,7 @@
 <!-- Same layout as news.html view but showing all articles -->
+<header>
+<h1>{Tech News}</h1>
+</header>
 
 <div class='listItem'>
   <ul>
@@ -6,7 +9,7 @@
       <img data-ng-src={{story.picture}} />
       <p class='ListHeadline' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
       <p class='ListAuthor'>{{story.byline}}</p>
-      <button ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">Read Article</button>
+      <button class="btn btn-primary" ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">Read Article</button>
     </li>
   </ul>
 </div>

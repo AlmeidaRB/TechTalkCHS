@@ -34,6 +34,8 @@ angular.module('mwl.calendar')
       });
     }
 
+    
+
     $scope.eventClicked = function(event) {
       showModal('Clicked', event);
     };
