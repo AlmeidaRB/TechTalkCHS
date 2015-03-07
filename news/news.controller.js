@@ -18,7 +18,17 @@
         console.log('newsCtrl.getProducts error')
       });
 
+      NewsService.getOneArticle($routeParams.articleId).success(function(data){
+      newsCtrl.getOneArticle = data;
+      //console.log(data);
+      })
+      .error(function(){
+        console.log('ERROR newsCtrl.getOneArticle')
+      });
 
+      newsCtrl.routeTo = function (path) {
+        $location.path(path);
+      };
 
 
 

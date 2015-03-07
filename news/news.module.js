@@ -14,6 +14,10 @@
         templateUrl: 'news/views/newsList.html',
         controller: 'NewsController as newsCtrl'
       })
+      .when('/news/detail/:articleId', {
+        templateUrl: 'news/views/newsDetail.html',
+        controller: 'NewsController as newsCtrl'
+      })
   });
 
 })();

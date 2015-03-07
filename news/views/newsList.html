@@ -4,11 +4,10 @@
   <ul>
     <li ng-repeat="story in newsCtrl.getArticles">
       <img data-ng-src={{story.picture}} />
-      <p class='ListHeadline'>{{story.headline}}</p>
+      <p class='ListHeadline' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
       <p class='ListAuthor'>{{story.byline}}</p>
       <p class='ListStory'>{{story.story}}</p>
-      <button ng-click='newsCtrl.getArticlesOne'>Read Article</button>
+      <button ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">Read Article</button>
     </li>
   </ul>
-  <button ng-click=''>Add New Article</button> <!-- this is an admin button -->
 </div>
