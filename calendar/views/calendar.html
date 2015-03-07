@@ -39,7 +39,7 @@
            calendar-auto-open="true">
            </mwl-calendar>
 
-<<<<<<< HEAD
+
            <script type="text/ng-template" id="modalContent.html">
                  <div class="modal-header">
                    <h3 class="modal-title">{{ event.title }}</h3>
@@ -118,8 +118,8 @@
               <h3 class="modal-title">{{ event.title }}</h3>
             </div>
             <div class="modal-body">
-              <p> Starts: {{ event.starts_at }}</p>
-              <p> Ends: {{ event.ends_at }}</p>
+              <p> Starts: {{ event.starts_at | date: 'h:mm a' }}</p>
+              <p> Ends: {{ event.ends_at | date: 'h:mm a' }}</p>
               <p>{{ event.description }}</p>
               <a ng-href="{{ event.url }}" target="_blank">{{ event.url }}</a>
             </div>

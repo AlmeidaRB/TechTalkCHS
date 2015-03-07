@@ -5,7 +5,8 @@
 
 <div class='listItem'>
   <ul>
-    <li ng-repeat="story in newsCtrl.getArticles">
+    <input type:'text' ng-model="searchText">
+    <li ng-repeat="story in newsCtrl.getArticles | filter:searchText">
       <img data-ng-src={{story.picture}} />
       <p class='ListHeadline' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
       <p class='ListAuthor'>{{story.byline}}</p>
