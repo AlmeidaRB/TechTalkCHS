@@ -2,7 +2,7 @@
   "use strict";
 
   angular.module('mwl.calendar')
-    .factory('CalendarService', function () {
+    .factory('CalendarService', function ($http, $rootScope) {
       var factoryObj = {};
       return factoryObj;
     });

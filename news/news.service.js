@@ -7,13 +7,12 @@
 
       var postArticle = function (newArticle) {
         $http.post(url, newArticle).success(function(){
-          //things can happen here
+
         })
         .error(function(){
           console.log('ERROR NewsService/postArticle');
         });
       };
-      
 
       var getArticles = function () {
         return $http.get(url);
@@ -23,27 +22,26 @@
         return $http.get(url + '/' + articleId);
       };
 
+      var deleteArticle = function (articleId) {
+        $http.delete(url + '/' + articleId);
+      };
 
-      //returns specified number of articles from db
-      // var getArticles = function (passedQuantity) {
-      //   if(passedQuantity==='all'){
-      //     return $http.get(url);
-      //   }else if(passedQuantity){
-      //
-      //   }
-      //
-      // };
+      var postComment = function (passedArticle, newComment) {
+        if(passedArticle.comments){
+          passedArticle.comments.push(newComment);
+          $http.put(url + '/' + passedArticle._id, passedArticle);
+        }else{
+          passedArticle.comments = [newComment];
+          $http.put(url + '/' + passedArticle._id, passedArticle);
+        };
+      };
 
       return {
         postArticle: postArticle,
         getArticles: getArticles,
-        getOneArticle: getOneArticle
-        // getArticlesFew: getArticlesFew,//marked for deletion
-        // getArticlesAll: getArticlesAll,//marked for deletion
-        // getArticlesOne: getArticlesOne,
-        // deleteArticle: deleteArticle,
-        // postComment: postComment,
-        // getComments: getComments
+        getOneArticle: getOneArticle,
+        deleteArticle: deleteArticle,
+        postComment: postComment
       };
 
     });
