@@ -3,17 +3,17 @@
 
 <!-- <div ng-controller=""></div> --><!--Calendar - These are the two controllers to create views for -->
 <header>
-  <h1><span>TechTalk</span> [CHS]</h1>
+  <h1 class="center-block">TechTalk {CHS}</h1>
 </header>
-<div class='newsWindow' ng-controller="NewsController as newsCtrl">
+<div class="newsWindow" ng-controller="NewsController as newsCtrl">
   <ul>
     <h1>News Feed</h1>
-    <li class='NewsItem' ng-repeat="story in newsCtrl.getArticles  | limitTo:3">
+    <li class="NewsItem" ng-repeat="story in newsCtrl.getArticles  | limitTo:3">
       <img data-ng-src={{story.picture}} />
-      <h3 class='Name'>{{story.headline}}</h3>
-      <h6 class='Author'>{{story.byline}}</h6>
+      <h3 class="Name">{{story.headline}}</h3>
+      <h6 class="Author">{{story.byline}}</h6>
     </li>
-    <button ng-click='newsCtrl.getArticlesAll'>View All Articles</button>
+    <button class="btn btn-primary" ng-click="newsCtrl.getArticlesAll">View All Articles</button>
   </ul>
 </div>
 
@@ -38,10 +38,7 @@
 
            <div class="col-md-6 text-center">
              <div class="btn-group">
-               <label class="btn btn-primary" ng-model="calendarView" btn-radio="'year'">Year</label>
-               <label class="btn btn-primary" ng-model="calendarView" btn-radio="'month'">Month</label>
                <label class="btn btn-primary" ng-model="calendarView" btn-radio="'week'">Week</label>
-               <label class="btn btn-primary" ng-model="calendarView" btn-radio="'day'">Day</label>
              </div>
            </div>
 
@@ -53,24 +50,24 @@
            calendar-current-day="calendarDay"
            calendar-control="calendarControl"
            calendar-event-click="eventClicked($event)"
-           calendar-edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
-           calendar-delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
            calendar-edit-event-click="eventEdited($event)"
            calendar-delete-event-click="eventDeleted($event)"
            calendar-auto-open="true">
            </mwl-calendar>
 
-     <script type="text/ng-template" id="modalContent.html">
-            <div class="modal-header">
-              <h3 class="modal-title">Event action occurred!</h3>
-            </div>
-            <div class="modal-body">
-              <p>Action: <pre>{{ action }}</pre></p>
-              <p>Event: <pre>{{ event | json }}</pre></p>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" ng-click="$modalInstance.close()">OK</button>
-            </div>
-      </script>
+           <script type="text/ng-template" id="modalContent.html">
+                  <div class="modal-header">
+                    <h3 class="modal-title">{{ event.title }}</h3>
+                  </div>
+                  <div class="modal-body">
+                    <p> Starts: {{ event.starts_at }}</p>
+                    <p> Ends: {{ event.ends_at }}</p>
+                    <p>{{ event.description }}</p>
+                    <a ng-href="{{ event.url }}">{{ event. url }}</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="$modalInstance.close()">OK</button>
+                  </div>
+          </script>
     </div>
   </div>
