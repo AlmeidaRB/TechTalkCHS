@@ -1,6 +1,13 @@
 <div class="fixedHomeNav"><i ng-click="newsCtrl.routeTo('/')" class="fa fa-home fa-3x"></i></div>
 
 
+
+<header>
+<h1>{Tech News}</h1>
+</header>
+
+
+
 <div class='DtlItem'>
   <img data-ng-src={{newsCtrl.getOneArticle.picture}} />
   <h2 class='DtlHeadline'>{{newsCtrl.getOneArticle.headline}}</h2>
@@ -8,20 +15,22 @@
   <p class='DtlStory'>{{newsCtrl.getOneArticle.story}}</p>
 </div>
 
-
-<div class="comments">
-  <h2>Comments</h2>
-  <ul>
-    <li ng-repeat="comment in newsCtrl.getOneArticle.comments">
-      <p class="comment">
-        <span>{{comment.username}}: </span>
-        <span>{{comment.comment}}</span></p>
-    </li>
-  </ul>
+<div class="commentforms">
+    <h2 id="comments">Comments</h2>
+      <!-- <p>Add comment:</p> -->
+      <form class='commentform' ng-submit="newsCtrl.addComment(newsCtrl.getOneArticle, newComment)">
+        <input type="text" ng-model="newComment.username" placeholder="Username">
+        <textarea cols="50" rows="4" ng-model="newComment.comment" placeholder="Add comment here"></textarea>
+        <button class= "btn btn-primary" type="submit">Post Comment</button>
+     </form>
 </div>
-<p>Add comment:</p>
-  <form class='commentform' ng-submit="newsCtrl.addComment(newsCtrl.getOneArticle, newComment)">
-    <input type="text" ng-model="newComment.username" placeholder="Username">
-    <textarea ng-model="newComment.comment"></textarea>
-    <button type="submit">Post Comment</button>
- </form>
+
+ <div class="comments">
+   <ul>
+     <li ng-repeat="comment in newsCtrl.getOneArticle.comments">
+       <p class="comment">
+         <span class="name">{{comment.username}}: </span>
+         <span>{{comment.comment}}</span></p>
+     </li>
+   </ul>
+ </div>

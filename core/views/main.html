@@ -10,7 +10,7 @@
       <slide ng-repeat="story in newsCtrl.getArticles | limitTo:3" active="slide.active">
         <img class='img img-responsive' data-ng-src="{{story.image}}" style="margin:auto;">
         <div class="carousel-caption">
-          <h4>Slide {{story.headline}}</h4>
+          <h4 class='ListHeadline'>Slide {{story.headline}}</h4>
           <p>{{story.byline}}</p>
         </div>
       </slide>
@@ -23,15 +23,14 @@
     <div class="mainTitle"><h1>News Feed</h1></div>
     <hr>
     <li class='NewsItem' ng-repeat="story in newsCtrl.getArticles  | limitTo:3">
-
       <img data-ng-src={{story.image}} />
-      <div class='headlineblock'>
+      <div>
         <h3 class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</h3>
         <h6 class='Author'>{{story.byline}}</h6>
       </div>
     </li>
-    <button ng-click="newsCtrl.routeTo('/news/list')">View All Articles</button>
   </ul>
+  <button class="btn btn-default" ng-click="newsCtrl.routeTo('/news/list')">View All Articles</button>
 </div>
 
 <div class="container-fluid" ng-controller="WeekController as wkCtrl">
@@ -41,7 +40,9 @@
      <div class="row">
        <div class="col-md-8 col-md-offset-2">
          <h2 class="text-center">{{ calendarControl.getTitle() }}</h2>
+
         <div class="viewAllEvents"><button class= "btn btn-primary" ng-click="wkCtrl.routeTo('/calendar')">All Events</button></a></div>
+
 
         <div class="row">
 
@@ -76,8 +77,8 @@
                     <h3 class="modal-title">{{ event.title }}</h3>
                   </div>
                   <div class="modal-body">
-                    <p> Starts: {{ event.starts_at }}</p>
-                    <p> Ends: {{ event.ends_at }}</p>
+                    <p> Starts: {{ event.starts_at | date: 'h:mm a' }}</p>
+                    <p> Ends: {{ event.ends_at | date: 'h:mm a' }}</p>
                     <p>{{ event.description }}</p>
                     <a ng-href="{{ event.url }}" target="_blank">{{ event. url }}</a>
                   </div>
