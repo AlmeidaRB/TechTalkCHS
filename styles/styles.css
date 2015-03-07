@@ -62,4 +62,17 @@ header {
   .newsWindow button {
     padding: 5px 0px 5px 0px; }
 
+.viewAllEvents {
+  float: right; }
+
+.row {
+  margin: 10px; }
+
+.col-md-6 {
+  float: left;
+  margin-left: -100px; }
+
+.container-fluid {
+  padding-bottom: 80px; }
+
 /*# sourceMappingURL=styles.css.map */
