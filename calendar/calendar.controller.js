@@ -79,7 +79,7 @@ angular.module('mwl.calendar')
   url: 'http://startupgrind.com/event/startup-grind-charleston-presents-matthew-gough-echovate/',
   starts_at: new Date(currentYear,currentMonth,19,17,30),
   ends_at: new Date(currentYear,currentMonth,19,20,30)
-  }
+}
 ];
 
     function showModal(action, event) {
