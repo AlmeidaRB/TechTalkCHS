@@ -1,7 +1,29 @@
 @font-face {
   font-family: 'TechTalk';
   src: url(Oranienbaum.ttf); }
+.carousel {
+  text-align: center;
+  margin: auto;
+  width: 78%;
+  height: 300px;
+  margin-bottom: 50px; }
 
+.carousel-inner {
+  height: 300px;
+  border: 1px black solid; }
+  .carousel-inner img {
+    height: 300px;
+    width: 100%; }
+
+.carousel-caption {
+  height: 230px; }
+
+/* slide {
+  height:200px;
+  .img {
+    height:200px;
+  }
+} */
 header {
   margin-bottom: 25px; }
   header h1 {
@@ -16,15 +38,28 @@ header {
 .newsWindow {
   text-align: center;
   width: 90%;
-  height: 350px;
   margin: 15px auto;
   padding: 10px;
-  border: 5px inset black; }
+  border: 3px double black; }
   .newsWindow h1, .newsWindow h3 {
     font-family: 'TechTalk'; }
+  .newsWindow h3 {
+    display: inline-block;
+    margin: 0; }
+  .newsWindow img {
+    width: 105px;
+    height: 85px;
+    display: inline-block; }
+  .newsWindow ul {
+    text-align: left;
+    padding: 5px; }
+  .newsWindow .headlineblock {
+    display: inline-block;
+    padding: 5px 0px 0px 10px; }
+  .newsWindow li {
+    list-style-type: none;
+    padding: 12px 0px 12px 0px; }
+  .newsWindow button {
+    padding: 5px 0px 5px 0px; }
 
-ul {
-  text-align: left; }
-
-li {
-  list-style-type: none; }
+/*# sourceMappingURL=styles.css.map */
