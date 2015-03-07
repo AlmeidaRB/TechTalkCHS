@@ -6,7 +6,8 @@
     'newsRoute',
     'calendarRoute',
     'ui.bootstrap',
-    'mwl.calendar'
+    'mwl.calendar',
+    'ui.router'
   ])
   .config(function ($routeProvider) {
     $routeProvider
