@@ -116,12 +116,13 @@ angular.module('mwl.calendar')
 
       event[field] = !event[field];
     };
-
   });
 
 
   angular.module('mwl.calendar')
-    .controller('WeekController', function (CalendarService, $scope, $modal, moment) {
+    .controller('WeekController', function (CalendarService, $scope, $modal, moment, $location) {
+
+      var wkCtrl = this;
 
     $scope.events = [
       {
@@ -234,6 +235,9 @@ angular.module('mwl.calendar')
 
         event[field] = !event[field];
       };
+      wkCtrl.routeTo = function (path) {
+      $location.path(path);
+    };
 
     });
 

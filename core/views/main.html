@@ -18,59 +18,47 @@
       </slide>
     </carousel>
   </div>
-  <!-- <div class="row">
-    <div class="col-md-6">
-      <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-    </div>
-    <div class="col-md-6">
-      Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-      <br />Enter a negative number or 0 to stop the interval.
-    </div>
-  </div> -->
 </div>
 
 <div class='newsWindow' ng-controller="NewsController as newsCtrl">
   <ul>
-    <h1>News Feed</h1>
+    <div class="mainTitle"><h1>News Feed</h1></div>
+    <hr>
     <li class='NewsItem' ng-repeat="story in newsCtrl.getArticles  | limitTo:3">
+
       <img data-ng-src={{story.image}} />
       <div class='headlineblock'>
-        <h3 class='Name'>{{story.headline}}</h3>
+        <h3 class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</h3>
         <h6 class='Author'>{{story.byline}}</h6>
       </div>
-      <img data-ng-src={{story.picture}} />
-      <p class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
-      <p class='Author'>{{story.byline}}</p>
     </li>
     <button ng-click="newsCtrl.routeTo('/news/list')">View All Articles</button>
   </ul>
 </div>
 
-
 <div class="container-fluid" ng-controller="WeekController as wkCtrl">
 
+  <div class="mainTitle"><h1>Upcoming Events</h1></div>
+  <hr>
      <div class="row">
        <div class="col-md-8 col-md-offset-2">
          <h2 class="text-center">{{ calendarControl.getTitle() }}</h2>
+        <div class="viewAllEvents"><button class= "btn btn-primary" ng-click="wkCtrl.routeTo('/calendar')">All Events</button></a></div>
 
-         <div class="row">
+        <div class="row">
 
            <div class="col-md-6 text-center">
              <div class="btn-group">
-
+                <div class="buttonHome">
                <button class="btn btn-primary" ng-click="calendarControl.prev()">Previous</button>
                <button class="btn btn-default" ng-click="setCalendarToToday()">Today</button>
                <button class="btn btn-primary" ng-click="calendarControl.next()">Next</button>
+               </div>
              </div>
            </div>
 
            <br class="visible-xs visible-sm">
 
-          <div class="col-md-6 text-center">
-            <div class="btn-group">
-              <label class="btn btn-primary" ng-model="calendarView" btn-radio="'week'">Week</label>
-            </div>
-          </div>
 
          </div>
 
