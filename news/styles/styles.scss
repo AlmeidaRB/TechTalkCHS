@@ -3,6 +3,32 @@
     src: url(Oranienbaum.ttf);
   }
 
+.carousel {
+  text-align:center;
+  margin:auto;
+  width:78%;
+  height:300px;
+  margin-bottom:50px;
+}
+
+.carousel-inner {
+  height:300px;
+  border:1px black solid;
+  img {
+    height:300px;
+    width:100%;
+  }
+}
+.carousel-caption {
+  height:230px;
+}
+/* slide {
+  height:200px;
+  .img {
+    height:200px;
+  }
+} */
+
 header {
   margin-bottom: 25px;
   h1 {
@@ -20,21 +46,36 @@ header {
 .newsWindow {
   text-align:center;
   width:90%;
-  height:350px;
   margin:15px auto;
   padding:10px;
   border: 3px double black;
   h1,h3 {
     font-family:'TechTalk';
   }
-}
-
-ul {
-  text-align:left;
-}
-
-li {
-  list-style-type: none;
+  h3 {
+    display:inline-block;
+    margin:0;
+  }
+  img {
+    width:105px;
+    height:85px;
+    display:inline-block;
+  }
+  ul {
+    text-align:left;
+    padding:5px;
+  }
+  .headlineblock {
+    display:inline-block;
+    padding: 5px 0px 0px 10px;
+  }
+  li {
+    list-style-type: none;
+    padding: 12px 0px 12px 0px;
+  }
+  button {
+    padding:5px 0px 5px 0px;
+  }
 }
 .modal-header {
     font-family: 'TechTalk';
