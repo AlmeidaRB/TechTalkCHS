@@ -38,8 +38,11 @@
         <h3 class='Name'>{{story.headline}}</h3>
         <h6 class='Author'>{{story.byline}}</h6>
       </div>
+      <img data-ng-src={{story.picture}} />
+      <p class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
+      <p class='Author'>{{story.byline}}</p>
     </li>
-    <button ng-click='newsCtrl.getArticlesAll'>View All Articles</button>
+    <button ng-click="newsCtrl.routeTo('/news/list')">View All Articles</button>
   </ul>
 </div>
 
