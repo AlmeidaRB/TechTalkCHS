@@ -64,7 +64,11 @@ header {
     text-align: center;
     cursor: pointer; }
 
+.viewAllEvents {
+  float: right; }
+
 .row {
+  font-family: 'TechTalk';
   margin: 10px; }
 
 .buttonHome {
@@ -73,6 +77,71 @@ header {
 
 .container-fluid {
   padding-bottom: 80px; }
+
+.modal-header {
+  font-family: 'TechTalk'; }
+
+.text-center {
+  font-family: 'TechTalk'; }
+
+.row {
+  font-family: 'TechTalk'; }
+
+.listItem {
+  border: 3px double black;
+  width: 90%;
+  margin: 15px auto;
+  padding: 10px; }
+  .listItem li {
+    list-style-type: none;
+    line-height: 10px; }
+
+.DtlItem {
+  border: 3px double black;
+  width: 90%;
+  margin: 15px auto;
+  padding: 10px; }
+
+#comments {
+  font-family: 'TechTalk';
+  font-weight: 900;
+  float: left;
+  border-bottom: 1px solid black;
+  width: 75%;
+  margin: auto; }
+
+.comments li {
+  float: right;
+  width: 50%;
+  text-align: left;
+  padding: 15px;
+  font-family: 'TechTalk';
+  list-style-type: none;
+  line-height: 5px; }
+
+.ListHeadline {
+  cursor: pointer; }
+
+.commentforms {
+  float: left;
+  width: 40%;
+  margin-left: 5%;
+  font-family: 'TechTalk'; }
+
+.commentform {
+  display: inline-block;
+  width: 300px; }
+  .commentform input {
+    margin-top: 20px;
+    width: 106%; }
+  .commentform textarea {
+    margin-top: 20px; }
+  .commentform button {
+    float: left; }
+
+.name {
+  font-weight: bold;
+  text-decoration: underline; }
 
 .mainTitle {
   font-family: 'Tech-talk';

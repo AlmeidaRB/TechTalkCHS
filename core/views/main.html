@@ -12,7 +12,7 @@
       <slide ng-repeat="story in newsCtrl.getArticles | limitTo:3" active="slide.active">
         <img class='img img-responsive' data-ng-src="{{story.image}}" style="margin:auto;">
         <div class="carousel-caption">
-          <h4>Slide {{story.headline}}</h4>
+          <h4 class='ListHeadline'>Slide {{story.headline}}</h4>
           <p>{{story.byline}}</p>
         </div>
       </slide>
@@ -42,7 +42,9 @@
      <div class="row">
        <div class="col-md-8 col-md-offset-2">
          <h2 class="text-center">{{ calendarControl.getTitle() }}</h2>
+
         <div class="viewAllEvents"><button class= "btn btn-primary" ng-click="wkCtrl.routeTo('/calendar')">All Events</button></a></div>
+
 
         <div class="row">
 
