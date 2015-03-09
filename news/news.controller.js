@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   angular.module('newsRoute')
-    .controller('NewsController', function(NewsService,$routeParams,$location,$scope,_){
+    .controller('NewsController', function(NewsService,$stateParams,$location,$scope,_){
 
       var newsCtrl = this;
 
@@ -18,7 +18,7 @@
         console.log('newsCtrl.getProducts error')
       });
 
-      NewsService.getOneArticle($routeParams.articleId).success(function(data){
+      NewsService.getOneArticle($stateParams.articleId).success(function(data){
       newsCtrl.getOneArticle = data;
       })
       .error(function(){

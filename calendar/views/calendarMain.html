@@ -1,0 +1,55 @@
+<div class="container-fluid" ng-controller="WeekController as wkCtrl">
+
+  <div class="mainTitle" ng-click="wkCtrl.routeTo('/calendar')"><h1>Upcoming Events</h1></div>
+  <hr>
+     <div class="row">
+       <div class="col-md-8 col-md-offset-2">
+         <h2 class="text-center">{{ calendarControl.getTitle() }}</h2>
+
+        <div class="viewAllEvents"><button class= "btn btn-primary" ng-click="wkCtrl.routeTo('/calendar')">All Events</button></a></div>
+
+
+        <div class="row">
+
+           <div class="col-md-6 text-center">
+             <div class="btn-group">
+                <div class="buttonHome">
+               <button class="btn btn-primary" ng-click="calendarControl.prev()">Previous</button>
+               <button class="btn btn-default" ng-click="setCalendarToToday()">Today</button>
+               <button class="btn btn-primary" ng-click="calendarControl.next()">Next</button>
+               </div>
+             </div>
+           </div>
+
+           <br class="visible-xs visible-sm">
+
+
+         </div>
+
+         <mwl-calendar
+           calendar-events="events"
+           calendar-view="calendarView"
+           calendar-current-day="calendarDay"
+           calendar-control="calendarControl"
+           calendar-event-click="eventClicked($event)"
+           calendar-edit-event-click="eventEdited($event)"
+           calendar-delete-event-click="eventDeleted($event)"
+           calendar-auto-open="true">
+           </mwl-calendar>
+
+           <script type="text/ng-template" id="modalContent.html">
+                  <div class="modal-header">
+                    <h3 class="modal-title">{{ event.title }}</h3>
+                  </div>
+                  <div class="modal-body">
+                    <p> Starts: {{ event.starts_at | date: 'h:mm a' }}</p>
+                    <p> Ends: {{ event.ends_at | date: 'h:mm a' }}</p>
+                    <p>{{ event.description }}</p>
+                    <a ng-href="{{ event.url }}" target="_blank">{{ event. url }}</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="$modalInstance.close()">OK</button>
+                  </div>
+          </script>
+    </div>
+  </div>

@@ -46,11 +46,12 @@
     list-style-type: none; }
 
 .center-block {
-  margin-top: 60px;
-  padding: 0px;
   text-align: center;
   font-family: 'TechTalk';
-  font-size: 60px; }
+  font-size: 5em;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  font-weight: bold; }
 
 span {
   font-style: italic; }
@@ -58,17 +59,19 @@ span {
 .newsWindow {
   text-align: center;
   width: 90%;
-  margin: 15px auto;
-  padding: 10px;
-  border: 3px double black; }
-  .newsWindow h1, .newsWindow h3 {
-    font-family: 'TechTalk'; }
+  margin: 45px auto;
+  padding: 10px; }
+  .newsWindow h1 {
+    font-family: 'TechTalk';
+    font-weight: bold;
+    font-size: 3em; }
   .newsWindow h3 {
+    font-family: 'TechTalk';
     display: inline-block;
     margin: 0; }
   .newsWindow img {
-    width: 105px;
-    height: 85px;
+    width: 250px;
+    height: 200px;
     margin-bottom: 10px;
     display: inline-block; }
   .newsWindow ul {
@@ -165,7 +168,11 @@ span {
 
 .mainTitle {
   font-family: 'Tech-talk';
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
+  .mainTitle h1 {
+    font-size: 3em;
+    font-weight: bold; }
 
 hr {
   width: 60%;
