@@ -56,6 +56,9 @@
 span {
   font-style: italic; }
 
+.home-pointer {
+  cursor: pointer; }
+
 .newsWindow {
   text-align: center;
   width: 90%;
@@ -143,7 +146,13 @@ span {
   line-height: 5px; }
 
 .ListHeadline {
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1.8em; }
+
+.ListAuthor {
+  font-size: 24px;
+  line-height: 1.4em; }
 
 .commentforms {
   float: left;
