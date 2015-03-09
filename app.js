@@ -1,27 +1,32 @@
 (function () {
-  "use strict";
+  'use strict';
 
   angular.module('ttcApp', [
-    'ngRoute',
     'newsRoute',
     'calendarRoute',
     'ui.bootstrap',
-    'mwl.calendar'
+    'mwl.calendar',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'core/views/main.html',
-        //controller: 'CoreController as coreCtrl'
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('main', {
+        abstract: true,
+        templateUrl: 'core/views/main.html'
       })
-      .when('/notfound', {
-        templateUrl: 'core/views/notFound.html'
+      .state('main.home', {
+        url: '/',
+        views: {
+          'news': {
+            templateUrl: 'news/views/news.html'
+          },
+          'calendar': {
+            templateUrl: 'calendar/views/calendarMain.html'
+          }
+        }
       })
-      .otherwise({
-        redirectTo: '/notfound'
-      });
   })
 
-.constant('_', _);
+  .constant('_', _);
 
 })();

@@ -1,10 +1,28 @@
-<div>
+<div class='carousel' ng-controller="NewsController as newsCtrl">
+  <div class='ctn'>
+    <carousel interval="4000">
+      <slide ng-repeat="story in newsCtrl.getArticles | limitTo:3" active="slide.active">
+        <img class='img img-responsive' data-ng-src="{{story.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4 class='ListHeadline'>Slide {{story.headline}}</h4>
+          <p>{{story.byline}}</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
+
+<div class='newsWindow' ng-controller="NewsController as newsCtrl">
   <ul>
-    <li class='NewsItem' ng-repeat="story in newsCtrl.stories | limitTo: 3">
-      <img data-ng-src={{story.picture}} />
-      <p class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</p>
-      <p class='Author'>{{story.byline}}</p>
+    <div class="mainTitle" ng-click="newsCtrl.routeTo('/news/list')"><h1>News Feed</h1></div>
+    <hr>
+    <li class='NewsItem' ng-repeat="story in newsCtrl.getArticles  | limitTo:3" >
+      <img data-ng-src={{story.image}} ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)"/>
+      <div>
+        <h3 class='Name' ng-click="newsCtrl.routeTo('/news/detail/'+ story._id)">{{story.headline}}</h3>
+        <h6 class='Author'>{{story.byline}}</h6>
+      </div>
     </li>
   </ul>
-  <button ng-click='newsCtrl.getArticlesAll'>View All Articles</button>
+  <button class="btn btn-default" ng-click="newsCtrl.routeTo('/news/list')">View All Articles</button>
 </div>
