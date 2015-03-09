@@ -44,6 +44,8 @@
   margin-top: 80px; }
   .listItem li {
     list-style-type: none; }
+  .listItem input {
+    font-size: 2em; }
 
 .center-block {
   text-align: center;
